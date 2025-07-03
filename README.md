@@ -1,7 +1,7 @@
 # Scalable Field-Aligned Reparameterization for Trimmed NURBS
 
 ## Overview
-ScaleUntrim is an open-source software package to reconstruct trimmed CAD models as a watertight spline representation (i.e., multi-patch NURBS). The copyright of the code belongs to Prof. Xiaodong Wei's group at Shanghai Jiao Tong University, China.
+ScaleUntrim is an open-source software package to reconstruct trimmed CAD models as a watertight spline representation (i.e., multi-patch NURBS).
 
 ## Software
 
@@ -27,7 +27,7 @@ make
 
 ## Parameter 
 
-All parameters can be adjusted in the `setting.config` file."
+All parameters can be adjusted in the `setting.config` file.
 
 ```text
 temp_dir: D:\\ScaleUntrim\\
@@ -41,23 +41,23 @@ collapsing_layer: 1
 fit_tolerance: 1.e-2
 ```
 
-`temp_dir` is to store intermediate files generated during the pipeline, such as triangular meshes, quadrilateral meshes, and so on.
+`temp_dir` is used to store intermediate files generated during the pipeline, such as triangular meshes, quadrilateral meshes, and so on.
 
-`run_from` indicates from which step in the pipeline to start running.
+`run_from` indicates from which step in the pipeline to resume running.
 
-`tri_mesh_tolerance` controls the density of triangle mesh.
+`tri_mesh_tolerance` controls the resolution of the triangle mesh.
 
 `fix_hole` is a switch that fixes the hole with new triangle meshes.
 
-`magnitude_factor` controls the density of the quadrilateral mesh.
+`magnitude_factor` controls the resolution of the quadrilateral mesh.
 
 `angle_for _sharp` recognizes sharp features.
 
-`minimum_cost` is an optimizer switch to remove position field singularity from Quadriflow.
+`minimum_cost` is an optimizer switch to remove the position field singularity.
 
 `collapsing_layer` indicates the layer of collapsing patches.
 
-`fit_tolerance`indicates fitting error.
+`fit_tolerance`controls the fitting error.
 
 ## Licenses
 
