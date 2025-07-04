@@ -7,9 +7,19 @@ ScaleUntrim is an open-source software package to reconstruct trimmed CAD models
 
 The software supports CMake build for Linux/Mac/Windows systems, which converts a trimmed CAD modal  `(.stp/.igs)` into an untrimmed NURBS `(.step)`.
 
-we recommend Visual Studio 2022 in Windows for compiling.
+We recommend Visual Studio 2022 in Windows for compiling.
+
+## External Dependencies
+
+- Boost
+- Eigen
+- OpenCascade
 
 ## Install
+
+We recommend CMake to generate the project system. (Cmake_minimum_required: VERSION 3.0).
+
+Prerequisite: Boost, Eigen, OpenCascade.
 
 ```
 git clone 
@@ -19,11 +29,11 @@ cmake ..
 make
 ```
 
-## External Dependencies
+Open the project for the first time: 
+- Open project - Local Windows Debugger(without any operations) 
+- Set "quadriflow" as setup project
 
-- Boost
-- Eigen
-- OpenCascade
+
 
 ## Parameter 
 
@@ -47,7 +57,7 @@ fit_tolerance: 1.e-2
 
 `tri_mesh_tolerance` controls the resolution of the triangle mesh.
 
-`fix_hole` is a switch that fixes the hole with new triangle meshes.
+`fix_hole` is a switch that fixes the defective holes, which exceed the given tolerance, with new triangle meshes.
 
 `magnitude_factor` controls the resolution of the quadrilateral mesh.
 
@@ -55,11 +65,32 @@ fit_tolerance: 1.e-2
 
 `minimum_cost` is an optimizer switch to remove the position field singularity.
 
-`collapsing_layer` indicates the layer of collapsing patches.
+`collapsing_layer` indicates the width of the slender patches, i.e., containing the number of quad mesh layers.
 
 `fit_tolerance`controls the fitting error.
 
 ## Licenses
+MIT License
+
+Copyright (c) 2025 Xiaodong Wei, Zheng Wei, Haoyu Su, Shizhou Luo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Authors
 
